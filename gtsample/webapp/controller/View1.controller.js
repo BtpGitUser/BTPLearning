@@ -9,6 +9,7 @@ sap.ui.define([
 
         return Controller.extend("gtsample.controller.View1", {
             onInit: function () {
+                console.log("initial Load");
                 sap.m.MessageToast.show("Welcome to Fiori")
             }
         });
