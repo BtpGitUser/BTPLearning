@@ -1,5 +1,0 @@
-<!-- Use stable and unique IDs!-->
-<core:FragmentDefinition xmlns:core='sap.ui.core' xmlns='sap.m'>
-	<!--  add your xml here -->
-	<Button id="idBtnhello" tooltip="Say Hello from UIFragment" text="Hello" press=".extension.customer.poc.HelloTable.onPresshello"/>
-</core:FragmentDefinition>
