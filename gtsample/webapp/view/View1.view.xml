@@ -1,7 +1,15 @@
-<mvc:View controllerName="gtsample.controller.View1"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
+<mvc:View controllerName="gtsample.controller.View1" xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
-        <content />
+        <content >
+            <Panel>
+                <content>
+                    <Label text="{i18n>form_name}"/>
+				    <Text text="{Name}"/>
+                </content>
+            </Panel>
+
+          
+        </content>
     </Page>
 </mvc:View>
