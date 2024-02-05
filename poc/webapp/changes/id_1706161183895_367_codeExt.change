@@ -1,0 +1,22 @@
+{
+	"changeType": "codeExt",
+	"reference": "customer.poc",
+	"namespace": "apps/customer.poc/changes/",
+	"projectId": "customer.poc",
+	"moduleName": "customer/poc/changes/coding/HelloTable",
+	"support": {
+		"generator": "rta.service.ControllerExtension"
+	},
+	"originalLanguage": "EN",
+	"layer": "CUSTOMER_BASE",
+	"fileType": "change",
+	"fileName": "id_1706161183895_367_codeExt",
+	"content": {
+		"codeRef": "coding/HelloTable.js"
+	},
+	"texts": {},
+	"selector": {
+		"controllerName": "sap.suite.ui.generic.template.ListReport.view.ListReport"
+	},
+	"creation": "2024-01-25T05:39:43.899Z"
+}

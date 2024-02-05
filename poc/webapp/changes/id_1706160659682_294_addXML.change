@@ -1,0 +1,30 @@
+{
+	"changeType": "addXML",
+	"reference": "customer.poc",
+	"namespace": "apps/customer.poc/changes/",
+	"projectId": "customer.poc",
+	"packageName": "$TMP",
+	"moduleName": "customer/poc/changes/fragments/HelloTable.fragment.xml",
+	"support": {
+		"generator": "sap.ui.rta.command",
+		"command": "addXML",
+		"sapui5Version": "1.120.4"
+	},
+	"originalLanguage": "EN",
+	"layer": "CUSTOMER_BASE",
+	"fileType": "change",
+	"fileName": "id_1706160659682_294_addXML",
+	"content": {
+		"targetAggregation": "content",
+		"index": 8,
+		"fragmentPath": "fragments/HelloTable.fragment.xml"
+	},
+	"texts": {},
+	"selector": {
+		"id": "sap.ui.demoapps.rta.fe::sap.suite.ui.generic.template.ListReport.view.ListReport::SEPMRA_C_PD_Product--template::ListReport::TableToolbar",
+		"idIsLocal": false
+	},
+	"dependentSelector": {},
+	"jsOnly": false,
+	"creation": "2024-01-25T05:30:59.784Z"
+}
