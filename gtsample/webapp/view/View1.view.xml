@@ -4,8 +4,23 @@
         <content >
             <Panel>
                 <content>
-                    <Label text="{i18n>form_name}"/>
-				    <Text text="{Name}"/>
+                    <VBox>
+                        <Label text="{i18n>form_name}"/>
+                        <Text text="{Name}"/>
+                        <Label text="{i18n>form_role}, {i18n>form_team}"/>
+                        <Text text="{Role} {Team}"/>
+                        <Label text="{i18n>form_joinedat}"/>
+                        <Text text="{Joined At}"/>
+                        <Label text="{i18n>form_country}"/>
+                        <Text text="{Country}"/>
+                        <Label text="{i18n>form_base}"/>
+                        <Text text="{Base Location}"/>
+                        <Label text="{i18n>form_url}"/>
+                        <Text text="{URL}"/>
+                        <Label text="{i18n>form_twitter}"/>
+                        <Text text="{Twitter}"/>
+                
+                    </VBox>
                 </content>
             </Panel>
 
