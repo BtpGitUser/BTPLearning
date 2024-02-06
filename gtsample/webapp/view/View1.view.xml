@@ -19,7 +19,12 @@
                 </content>
             </Panel>
 
-          
+            <Panel headerText="{i18n>helloPanelTitle}" class="sapUiResponsiveMargin" width="auto" >
+                <content>
+                    <Label text = "featureBranch2"/>
+                    <Label text = "featureBranch2Label2"/>
+                </content>
+            </Panel>          
         </content>
     </Page>
 </mvc:View>
