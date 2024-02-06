@@ -23,7 +23,19 @@
                 </content>
             </Panel>
 
-          
+            <Panel headerText="{i18n>helloPanelTitle}" class="sapUiResponsiveMargin" width="auto" >
+                <content>
+                    <Button
+                        text="Dialog"
+                        class="sapUiSmallMarginBottom"
+                        ariaHasPopup="Dialog" />
+                    <Button
+                        text="Dialog (Fixed Size)"
+                        class="sapUiSmallMarginBottom"
+                        ariaHasPopup="Dialog" />
+		
+                </content>
+            </Panel>          
         </content>
     </Page>
 </mvc:View>
