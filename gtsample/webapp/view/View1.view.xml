@@ -21,8 +21,15 @@
 
             <Panel headerText="{i18n>helloPanelTitle}" class="sapUiResponsiveMargin" width="auto" >
                 <content>
-                    <Label text = "featureBranch2"/>
-                    <Label text = "featureBranch2Label2"/>
+                    <Button
+                        text="Dialog"
+                        class="sapUiSmallMarginBottom"
+                        ariaHasPopup="Dialog" />
+                    <Button
+                        text="Dialog (Fixed Size)"
+                        class="sapUiSmallMarginBottom"
+                        ariaHasPopup="Dialog" />
+		
                 </content>
             </Panel>          
         </content>
