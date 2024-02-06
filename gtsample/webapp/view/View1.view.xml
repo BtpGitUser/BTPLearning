@@ -10,7 +10,12 @@
                         press=".onOpenDialog"
                         class="sapUiSmallMarginEnd"
                     />
-                    
+                    <Button
+                        id="helloDialogBtn"
+                        text="{i18n>openDialogButtonTextP}"
+                        press=".onOpenDialogP"
+                        class="sapUiSmallMarginEnd"
+                    />
                 </content>
             </Panel>
 

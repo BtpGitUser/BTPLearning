@@ -20,6 +20,15 @@ sap.ui.define([
                 });
     
                 this.pDialog.then((oDialog) => oDialog.open());
+            },
+
+            onOpenDialogP() {
+                // create dialog lazily
+                this.pDialog ??= this.loadFragment({
+                    name: "gtsample.view.DialogP"
+                });
+    
+                this.pDialog.then((oDialog) => oDialog.open());
             }
             
         });
