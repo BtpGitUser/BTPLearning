@@ -2,25 +2,15 @@
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
         <content >
-            <Panel>
+            <Panel headerText="{i18n>helloPanelTitle}" class="sapUiResponsiveMargin" width="auto" >
                 <content>
-                    <VBox>
-                        <Label text="{i18n>form_name}"/>
-                        <Text text="{Name}"/>
-                        <Label text="{i18n>form_role}, {i18n>form_team}"/>
-                        <Text text="{Role} {Team}"/>
-                        <Label text="{i18n>form_joinedat}"/>
-                        <Text text="{Joined At}"/>
-                        <Label text="{i18n>form_country}"/>
-                        <Text text="{Country}"/>
-                        <Label text="{i18n>form_base}"/>
-                        <Text text="{Base Location}"/>
-                        <Label text="{i18n>form_url}"/>
-                        <Text text="{URL}"/>
-                        <Label text="{i18n>form_twitter}"/>
-                        <Text text="{Twitter}"/>
-                
-                    </VBox>
+                    <Button
+                        id="helloDialogButton"
+                        text="{i18n>openDialogButtonText}"
+                        press=".onOpenDialog"
+                        class="sapUiSmallMarginEnd"
+                    />
+                    
                 </content>
             </Panel>
 

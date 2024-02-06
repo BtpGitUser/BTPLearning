@@ -11,6 +11,16 @@ sap.ui.define([
             onInit: function () {
                 console.log("initial Load");
                 sap.m.MessageToast.show("Welcome to Fiori")
+            },
+
+            onOpenDialog() {
+                // create dialog lazily
+                this.pDialog ??= this.loadFragment({
+                    name: "gtsample.view.DialogY"
+                });
+    
+                this.pDialog.then((oDialog) => oDialog.open());
             }
+            
         });
     });
