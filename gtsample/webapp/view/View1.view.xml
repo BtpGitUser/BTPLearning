@@ -16,6 +16,10 @@
                         press=".onOpenDialogP"
                         class="sapUiSmallMarginEnd"
                     />
+                    <Button
+                        text="TestCaseMergeWith Feature2"
+                        class="sapUiSmallMarginEnd"
+                    />
                 </content>
             </Panel>
 
