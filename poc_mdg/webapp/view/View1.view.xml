@@ -1,82 +1,65 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="pocmdg.controller.View1" displayBlock="true">
-    <Page id="page" title="{i18n>title}">
-        <content>
-            <VBox width="100%" direction="Column" id="vbox0">
-                <items>
-                    <HBox width="100%" id="hbox0">
-                        <items>
-                            <HBox width="100%" id="hbox1">
-                                <items>
-                                    <Label text="Producer selection" width="100%" id="label1_1707374571435"/>
-                                    <Select xmlns="sap.m" id="select0">
-                                <items>
-                                    <core:Item xmlns:core="sap.ui.core" key="item-key-1" text="Item Text One" id="item0_1707374388874"/>
-                                    <core:Item xmlns:core="sap.ui.core" key="item-key-2" text="Item Text Two" id="item1"/>
-                                    </items>
-                                
-                            </Select>
-                                </items>
-                            </HBox>
-                            <HBox width="100%" id="hbox2">
-                                <items>
-                                    <Label text="Master Data Object Selection" width="100%" id="label2_1707374573183"/>
-                                    <Select xmlns="sap.m" id="select1">
-                                <items>
-                                    <core:Item xmlns:core="sap.ui.core" key="item-key-1" text="Item Text One" id="item2"/>
-                                    <core:Item xmlns:core="sap.ui.core" key="item-key-2" text="Item Text Two" id="item3"/>
-                                    </items>
-                                
-                            </Select>
-                                </items>
-                            </HBox>
-                            <HBox width="100%" id="hbox0_1707374459710">
-                                <items>
-                                    <Label text="Consumer selection" width="100%" id="label0_1707374495310"/>
-                                    <Select xmlns="sap.m" id="select2">
-                                        <items>
-                                        <core:Item xmlns:core="sap.ui.core" key="item-key-1" text="Item Text One" id="item4"/>
-                                        <core:Item xmlns:core="sap.ui.core" key="item-key-2" text="Item Text Two" id="item5"/>
-                                        </items>
-                                    </Select>
-                                    <Button xmlns="sap.m" text="Button" id="button1"/>
-                                </items>
-                            </HBox>
-                        </items>
-                    </HBox>
-                    
-                    <Table noDataText="Drop column list items here and columns in the area above" id="table0">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="pocmdg.controller.View1" displayBlock="true"
+    xmlns:f="sap.f" xmlns:fb="sap.ui.comp.filterbar" xmlns:svm="sap.ui.comp.smartvariants">
+    <f:DynamicPage headerExpanded="{/headerExpanded}">
+			<f:title>
+				<f:DynamicPageTitle>
+					<f:heading>
+						<svm:SmartVariantManagement id="svm" showExecuteOnSelection="true" />
+					</f:heading>
+					<f:expandedContent>
+						<Label id="expandedLabel" text="Manual Trigger" />
+					</f:expandedContent>
+					<f:snappedContent>
+						<Label id="snappedLabel" text="Manual Trigger" />
+					</f:snappedContent>
+				</f:DynamicPageTitle>
+			</f:title>
+			<f:header>
+				<f:DynamicPageHeader>
+					<f:content>
+						<fb:FilterBar id="filterbar" persistencyKey="myPersKey" useToolbar="false" search=".onSearch" 
+                            filterChange=".onFilterChange" afterVariantLoad=".onAfterVariantLoad">
+							<fb:filterGroupItems>
+								<fb:FilterGroupItem name="Object" label="Object" groupName="Group1" visibleInFilterBar="true">
+									<fb:control>
+										<MultiComboBox >
+											<core:Item xmlns:core="sap.ui.core" key="Object-Master" text="Master Data" />
+                                            <core:Item xmlns:core="sap.ui.core" key="Object-Partner" text="Business Partner" />
+										</MultiComboBox>
+									</fb:control>
+								</fb:FilterGroupItem>
+								<fb:FilterGroupItem name="Producer" label="Producer" groupName="Group1" visibleInFilterBar="true">
+									<fb:control>
+										<MultiComboBox >
+											<core:Item xmlns:core="sap.ui.core" key="Producer-AS2" text="AS2"/>
+                                            <core:Item xmlns:core="sap.ui.core" key="Producer-S4B" text="S4B" />
+                                            <core:Item xmlns:core="sap.ui.core" key="Producer-S4D" text="S4D" />
+										</MultiComboBox>
+									</fb:control>
+								</fb:FilterGroupItem>
+								<fb:FilterGroupItem name="Consumer" label="Consumer" groupName="Group1" visibleInFilterBar="true">
+									<fb:control>
+										<MultiComboBox >
+											<core:Item xmlns:core="sap.ui.core" key="Consumer-key-1" text="AS2" />
+                                            <core:Item xmlns:core="sap.ui.core" key="Consumer-key-2" text="S4B" />
+                                            <core:Item xmlns:core="sap.ui.core" key="Consumer-key-2" text="S4D" />
+										</MultiComboBox>
+                                        
+									</fb:control>
+								</fb:FilterGroupItem>
+							</fb:filterGroupItems>
+						</fb:FilterBar>
+					</f:content>
+				</f:DynamicPageHeader>
+			</f:header>
+			<f:content>
+                <Table noDataText="Drop column list items here and columns in the area above" >
                         <infoToolbar>
-                            <OverflowToolbar id="_IDGenOverflowToolbar1">
+                            <Toolbar >
                                 <ToolbarSpacer/>
-                                <DatePicker xmlns="sap.m" id="picker0" width="25%"/>
-                            </OverflowToolbar>
+                                <DateRangeSelection width="50%"/>
+                            </Toolbar>
                         </infoToolbar>
-                        <items>
-                            <ColumnListItem type="Active" id="item0">
-                                <cells>
-                                    <Text text="Row 1 Cell 1" id="text2"/>
-                                    <Text text="Row 1 Cell 2" id="text3"/>
-                                    <Text text="Row 1 Cell 3" id="text4"/>
-                                    <Text text="Row 1 Cell 4" id="text5"/>
-                                </cells>
-                            </ColumnListItem>
-                            <ColumnListItem type="Active" id="item6">
-                                <cells>
-                                    <Text text="Row 2 Cell 1" id="text6"/>
-                                    <Text text="Row 2 Cell 2" id="text7"/>
-                                    <Text text="Row 2 Cell 3" id="text8"/>
-                                    <Text text="Row 2 Cell 4" id="text9"/>
-                                </cells>
-                            </ColumnListItem>
-                            <ColumnListItem type="Active" id="item7">
-                                <cells>
-                                    <Text text="Row 3 Cell 1" id="text10"/>
-                                    <Text text="Row 3 Cell 2" id="text11"/>
-                                    <Text text="Row 3 Cell 3" id="text12"/>
-                                    <Text text="Row 3 Cell 4" id="text13"/>
-                                </cells>
-                            </ColumnListItem>
-                        </items>
                         <columns>
                             <Column id="column0">
                                 <header>
@@ -85,7 +68,7 @@
                             </Column>
                             <Column id="column1">
                                 <header>
-                                    <Label text="Master data synch objects" id="label1"/>
+                                    <Label text="Objects" id="label1"/>
                                 </header>
                             </Column>
                             <Column id="column2">
@@ -97,9 +80,84 @@
                                 <header>
                                     <Label text="Consumer" id="label3"/>
                                 </header>
-                            </Column></columns></Table>
-                </items>
-            </VBox>
-        </content>
-    </Page>
+                            </Column>
+                            <Column id="column4">
+                                <header>
+                                    <Label text="Action" id="label4"/>
+                                </header>
+                            </Column>
+                        </columns>
+                        <items>
+                            <ColumnListItem type="Active" >
+                                <cells>
+                                    <Text text="06/02/2024"/>
+                                    <Text text="Master Data" />
+                                    <Text text="AS2"/>
+                                    <Text text="S4B"/>
+                                    <Button text="Sync" type="Emphasized"/>
+                                </cells>
+                            </ColumnListItem>
+                            <ColumnListItem type="Active" id="item6">
+                                <cells>
+                                    <Text text="26/02/2024" />
+                                    <Text text="Business Partner"/>
+                                    <Text text="S4B" />
+                                    <Text text="AS2" />
+                                    <Button text="Sync" type="Emphasized"/>
+                                </cells>
+                            </ColumnListItem>
+                            <ColumnListItem type="Active" id="item7">
+                                <cells>
+                                    <Text text="31/01/2024" />
+                                    <Text text="Master Data"/>
+                                    <Text text="S4B"/>
+                                    <Text text="S4D"/>
+                                    <Button text="Sync" type="Emphasized"/>
+                                </cells>
+                            </ColumnListItem>
+                            <ColumnListItem type="Active" >
+                                <cells>
+                                    <Text text="31/01/2024"/>
+                                    <Text text="Business Partner" />
+                                    <Text text="S4D"/>
+                                    <Text text="AS2"/>
+                                    <Button text="Sync" type="Emphasized"/>
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                        
+                    </Table>
+           
+				<!-- <Table
+					id="table"
+					inset="false"
+					items="{
+						path: '/ProductCollection'
+					}"
+				>
+					<columns>
+						<Column minScreenWidth="Tablet" demandPopin="true">
+							<Text text="Name"/>
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true">
+							<Text text="Category"/>
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true">
+							<Text text="SupplierName"/>
+						</Column>
+					</columns>
+
+					<items>
+						<ColumnListItem vAlign="Middle">
+							<cells>
+								<ObjectIdentifier title="{Name}" text="{ProductId}" />
+								<Text text="{Category}" />
+								<Text text="{SupplierName}" />
+							</cells>
+						</ColumnListItem>
+					</items>
+				</Table> -->
+                
+			</f:content>
+		</f:DynamicPage>
 </mvc:View>
