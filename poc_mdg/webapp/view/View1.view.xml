@@ -1,0 +1,105 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="pocmdg.controller.View1" displayBlock="true">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <VBox width="100%" direction="Column" id="vbox0">
+                <items>
+                    <HBox width="100%" id="hbox0">
+                        <items>
+                            <HBox width="100%" id="hbox1">
+                                <items>
+                                    <Label text="Producer selection" width="100%" id="label1_1707374571435"/>
+                                    <Select xmlns="sap.m" id="select0">
+                                <items>
+                                    <core:Item xmlns:core="sap.ui.core" key="item-key-1" text="Item Text One" id="item0_1707374388874"/>
+                                    <core:Item xmlns:core="sap.ui.core" key="item-key-2" text="Item Text Two" id="item1"/>
+                                    </items>
+                                
+                            </Select>
+                                </items>
+                            </HBox>
+                            <HBox width="100%" id="hbox2">
+                                <items>
+                                    <Label text="Master Data Object Selection" width="100%" id="label2_1707374573183"/>
+                                    <Select xmlns="sap.m" id="select1">
+                                <items>
+                                    <core:Item xmlns:core="sap.ui.core" key="item-key-1" text="Item Text One" id="item2"/>
+                                    <core:Item xmlns:core="sap.ui.core" key="item-key-2" text="Item Text Two" id="item3"/>
+                                    </items>
+                                
+                            </Select>
+                                </items>
+                            </HBox>
+                            <HBox width="100%" id="hbox0_1707374459710">
+                                <items>
+                                    <Label text="Consumer selection" width="100%" id="label0_1707374495310"/>
+                                    <Select xmlns="sap.m" id="select2">
+                                        <items>
+                                        <core:Item xmlns:core="sap.ui.core" key="item-key-1" text="Item Text One" id="item4"/>
+                                        <core:Item xmlns:core="sap.ui.core" key="item-key-2" text="Item Text Two" id="item5"/>
+                                        </items>
+                                    </Select>
+                                    <Button xmlns="sap.m" text="Button" id="button1"/>
+                                </items>
+                            </HBox>
+                        </items>
+                    </HBox>
+                    
+                    <Table noDataText="Drop column list items here and columns in the area above" id="table0">
+                        <infoToolbar>
+                            <OverflowToolbar id="_IDGenOverflowToolbar1">
+                                <ToolbarSpacer/>
+                                <DatePicker xmlns="sap.m" id="picker0" width="25%"/>
+                            </OverflowToolbar>
+                        </infoToolbar>
+                        <items>
+                            <ColumnListItem type="Active" id="item0">
+                                <cells>
+                                    <Text text="Row 1 Cell 1" id="text2"/>
+                                    <Text text="Row 1 Cell 2" id="text3"/>
+                                    <Text text="Row 1 Cell 3" id="text4"/>
+                                    <Text text="Row 1 Cell 4" id="text5"/>
+                                </cells>
+                            </ColumnListItem>
+                            <ColumnListItem type="Active" id="item6">
+                                <cells>
+                                    <Text text="Row 2 Cell 1" id="text6"/>
+                                    <Text text="Row 2 Cell 2" id="text7"/>
+                                    <Text text="Row 2 Cell 3" id="text8"/>
+                                    <Text text="Row 2 Cell 4" id="text9"/>
+                                </cells>
+                            </ColumnListItem>
+                            <ColumnListItem type="Active" id="item7">
+                                <cells>
+                                    <Text text="Row 3 Cell 1" id="text10"/>
+                                    <Text text="Row 3 Cell 2" id="text11"/>
+                                    <Text text="Row 3 Cell 3" id="text12"/>
+                                    <Text text="Row 3 Cell 4" id="text13"/>
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                        <columns>
+                            <Column id="column0">
+                                <header>
+                                    <Label text="Date" id="label0"/>
+                                </header>
+                            </Column>
+                            <Column id="column1">
+                                <header>
+                                    <Label text="Master data synch objects" id="label1"/>
+                                </header>
+                            </Column>
+                            <Column id="column2">
+                                <header>
+                                    <Label text="Producer" id="label2"/>
+                                </header>
+                            </Column>
+                            <Column id="column3">
+                                <header>
+                                    <Label text="Consumer" id="label3"/>
+                                </header>
+                            </Column></columns></Table>
+                </items>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>
