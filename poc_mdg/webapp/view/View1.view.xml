@@ -63,7 +63,7 @@
                         <columns>
                             <Column id="column0">
                                 <header>
-                                    <Label text="Date" id="label0"/>
+                                    <Label text="Last Sync done at" id="label0"/>
                                 </header>
                             </Column>
                             <Column id="column1">
